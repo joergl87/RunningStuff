@@ -13,13 +13,13 @@ for prefix, uri in namespaces.items():
     ET.register_namespace(prefix, uri)
 
 #tree_master = ET.parse('./Benchmarks/EmptyActivityTemplate.tcx')
-tree_master = ET.parse('./dataJan/EmptyActivityTemplate.tcx')
+tree_master = ET.parse('./dataJan2016/EmptyActivityTemplate.tcx')
 root_master = tree_master.getroot()
 activities_master = root_master.find('./Activities', namespaces)
 
 # Path where your tcx files are stored
 #path_to_tcx_files = './Benchmarks/'
-path_to_tcx_files = './dataJan/'
+path_to_tcx_files = './dataJan2016/'
 
 # Iterating over all tcx files in the specified directory
 for filename in os.listdir(path_to_tcx_files):
